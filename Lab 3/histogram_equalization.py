@@ -10,9 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 img = cv2.imread('lena.jpg',0)
 
-plt.imshow(img, 'gray')
-plt.title("Input Image")
-plt.show()
+
+
 
 
 # plt.hist(img.ravel(), 255, [0,255])
@@ -40,10 +39,10 @@ plt.show()
 
 pdf = histogram / total_pixel
 
-plt.plot(pdf)
-plt.show()
+#plt.plot(pdf)
+#plt.show()
 
-print(histogram)
+##print(histogram)
 # print(pdf)
 
 ''''  Calculatin cdf && s = (L-1)*sum(pdf[i]) '''
@@ -81,6 +80,16 @@ for i in range(img_h):
 plt.imshow(equalized_img, 'gray')
 plt.title("Histogram Equalized Image")
 plt.show()
+
+plt.figure(figsize=(20,8))
+plt.subplot(1,2,1)
+plt.title("Input Image")
+plt.show()
+
+plt.subplot(1,2, 2)
+
+
+
 
 # plt.hist(equalized_img.ravel(), 255, [0, 255])
 # plt.title("Histogram Equalized Image Histogram")
